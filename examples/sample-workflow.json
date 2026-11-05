@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "nodes": [
+    {"id":"input","type":"input","position":{"x":80,"y":150},"data":{"label":"Input","config":{}}},
+    {"id":"llm","type":"mock_llm","position":{"x":360,"y":150},"data":{"label":"Summarize","config":{"prompt":"Summarize this: {{nodes.input.value.text}}"}}},
+    {"id":"output","type":"output","position":{"x":650,"y":150},"data":{"label":"Output","config":{"value":"{{nodes.llm.text}}"}}}
+  ],
+  "edges": [
+    {"id":"e1","source":"input","target":"llm"},
+    {"id":"e2","source":"llm","target":"output"}
+  ]
+}
