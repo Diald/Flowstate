@@ -5,3 +5,5 @@ __pycache__/
 backend/workflow.db
 frontend/node_modules/
 frontend/dist/
+
+frontend/*.tsbuildinfo
